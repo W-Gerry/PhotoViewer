@@ -2,14 +2,7 @@
     width: 100%;
 }
 
-
-
-.image-container {
-    border-radius: 25px;
-    border: 3px solid white;
-    object-fit: cover;
-}
-
 .image {
     border-radius: 25px;
+    border: 3px solid white;
 }

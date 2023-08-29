@@ -1,22 +1,25 @@
-import {useState} from "react";
-import { imageUrls } from "../GetImages";
+import { imageUrls } from "../ImageSelector/GetImages";
 import "./GalleryViewer.css"
 
-export function GalleryViewer () {
-    const [imageId, setImageId] = useState(0)
+export function GalleryViewer ({setSelectedImageUrl}) {
 
     return (
         <>
-            <h1>All Images</h1>
-            <div className="thumbnail-gallery">
-                {imageUrls.map((url) => {
-                    return <img 
-                        className="thumbnail"
-                        src={url}
-                        />
-                })}
+            <div className="thumbnail-gallery-wrapper">
+                <h1>All Images</h1>
+                {/* <p>Selected image = {imageUrl}</p> */}
+                <div className="thumbnail-gallery">
+                    {imageUrls.map((url) => {
+                        return <>
+                            <img 
+                                className="thumbnail"
+                                src={url}
+                                onClick={() => setSelectedImageUrl(url)}
+                            />
+                        </>
+                    })}
+                </div>
             </div>
-            
         </>
     )
 }
