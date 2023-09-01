@@ -3,7 +3,12 @@
 import { imageUrls } from "../ImageSelector/GetImages";
 import "./GalleryViewer.css"
 
-export function GalleryViewer ({setSelectedImageUrl}) {
+interface GalleryViewerProps {
+    setSelectedImageUrl: (imageUrl: string) => void;
+}
+
+
+export function GalleryViewer ({setSelectedImageUrl}:GalleryViewerProps) {
 
     return (
         <>
