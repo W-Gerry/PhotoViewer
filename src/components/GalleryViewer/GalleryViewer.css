@@ -17,7 +17,7 @@
     border: 5px solid white;
 }
 
-.thumbnail-selected {
+.-selected {
     height: 200px;
     width: 300px;
     border-radius: 25px;

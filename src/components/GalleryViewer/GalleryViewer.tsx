@@ -1,4 +1,4 @@
-import { useState } from "react";
+// import { useState } from "react";
 
 import { imageUrls } from "../ImageSelector/GetImages";
 import "./GalleryViewer.css"
@@ -10,7 +10,16 @@ interface GalleryViewerProps {
 
 export function GalleryViewer ({setSelectedImageUrl}:GalleryViewerProps) {
 
-  const [style, setStyle] = useState("thumbnail")
+  //const [style, setStyle] = useState("thumbnail")
+
+  // const updateStyle = (e : any) => {
+  //   if(!e.target.classList.contains('-selected')) {
+  //     e.target.classList.add('-selected') 
+  //   }
+  //   else {
+  //     e.target.classList.remove('-selected') 
+  //   }
+  // }
 
   return (
     <>
@@ -18,13 +27,14 @@ export function GalleryViewer ({setSelectedImageUrl}:GalleryViewerProps) {
         <h1>All Images</h1>
         <h2>Click an image to show as the main photo</h2>
         <div className="thumbnail-gallery">
-          {imageUrls.map((url) =>
+          {imageUrls.map((url, index) =>
             <img
-              className={style}
+              id={index.toString()}
+              className="thumbnail"
               src={url}
               onClick={() => {
                 setSelectedImageUrl(url);
-                setStyle("thumbnail-selected");
+                // updateStyle;
               }}
             />
           )}
