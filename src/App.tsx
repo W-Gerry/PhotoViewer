@@ -10,8 +10,7 @@ function App() {
   return (
     <>
       <div className="gallery-wrapper">
-            <h1>React Photo Viewer</h1>
-            <p>Selected image: {selectedImageUrl}</p>
+            <h1>Image Gallery Using React</h1>
             <PhotoViewer selectedImageUrl={selectedImageUrl}/>
             <GalleryViewer setSelectedImageUrl={setSelectedImageUrl}/>
       </div>

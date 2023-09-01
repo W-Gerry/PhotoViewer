@@ -4,6 +4,8 @@
 
 .image {
     border-radius: 25px;
-    border: 10px solid white;
+    border: 8px solid white;
     position: relative;
+    width: 50vw;
+    height: auto;
 }
