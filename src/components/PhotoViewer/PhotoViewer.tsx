@@ -4,7 +4,6 @@ interface PhotoViewerProps {
     selectedImageUrl: string; 
 }
 
-// declare and export new function called 'PhotoViewer'
 export function PhotoViewer( {selectedImageUrl}:PhotoViewerProps ) {    
     return (  
         <>                           
